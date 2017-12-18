@@ -149,7 +149,7 @@ app.get('/vicinityatms', function(req, res) {
     } else {
         count = req.param('nearest');
     }
-    console.log("#####received vicinit API request with criteria: " + criteria);
+    console.log("######Received vicinit API request with criteria: " + criteria);
     geo_query = {
         type: "atms?limit=" + count, //Required - the type of collection to be retrieved
         //		qs:criteria
