@@ -149,6 +149,7 @@ app.get('/vicinityatms', function(req, res) {
     } else {
         count = req.param('nearest');
     }
+    console.log("#####received vicinit API request with criteria: " + criteria);
     geo_query = {
         type: "atms?limit=" + count, //Required - the type of collection to be retrieved
         //		qs:criteria
@@ -224,4 +225,4 @@ function expireToken() {
 // Listen for requests until the server is stopped
 var PORT = process.env.VCAP_APP_PORT || 9000;
 app.listen(PORT);
-console.log('Listening on port ' + PORT);
+console.log('Listening on port ' + PORT)
