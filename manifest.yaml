@@ -1,0 +1,4 @@
+applications:
+- name: AIBATMLocatorAPIDemo
+  random-route: true
+  memory: 128M
