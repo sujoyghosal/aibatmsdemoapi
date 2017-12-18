@@ -24,13 +24,14 @@ var allowCrossDomain = function(req, res, next) {
         next();
     }
 };
+
 var app = express();
 var allentities = [];
 app.use(allowCrossDomain);
 //app.use(express.bodyParser());
 app.use(express.urlencoded());
 app.use(express.json());
-// Initialize Usergrid
+
 var ug = new usergrid.client({
     'orgName': 'sujoyghosal',
     'appName': 'AIBLOCATIONS',
@@ -52,7 +53,7 @@ var rootTemplate = {
 
 app.get('/', function(req, resp) {
     //    resp.jsonp(rootTemplate);
-    out = "Hey, are you looking for something?";
+    out = "Are you looking for something?";
     out += "  Use /allatms to get all ATMS or addATM with name=value pairs to add an ATM or find ATMs nearby by passing lat long values to vicinityatms";
     resp.jsonp(out);
 });
