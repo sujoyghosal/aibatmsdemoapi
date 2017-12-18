@@ -58,7 +58,6 @@ app.get('/', function(req, resp) {
     resp.jsonp(out);
 });
 
-// GET 
 var userid;
 app.get('/allatms', function(req, res) {
     if (loggedIn === null) {
